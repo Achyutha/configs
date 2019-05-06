@@ -1,0 +1,59 @@
+set nocompatible              " be iMproved, required --- "
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'rust-lang/rust.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'https://github.com/leafgarland/typescript-vim.git'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'w0rp/ale'
+Plugin 'dart-lang/dart-vim-plugin'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'cespare/vim-toml'
+
+call vundle#end()            " required --- "
+filetype plugin indent on    " required --- "
+
+set number relativenumber
+syntax on
+
+let &colorcolumn=join(range(80,999),",")
+let g:indentLine_color_term = 239
+let g:tablineclosebutton=1
+highlight ColorColumn ctermbg=000 guibg=#21060b
+let g:indentLine_setColors = 0
+set incsearch
+set hlsearch
+set cindent
+set ignorecase
+set cursorline
+set background=dark
+set ff=unix
+set t_co=256
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set undofile
+set undodir=~/.vim/undodir
+set clipboard=unnamedplus
+
+" Remap Keys --- "
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+inoremap jj <Esc>
+
+
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+
+autocmd vimenter * NERDTree | wincmd w
