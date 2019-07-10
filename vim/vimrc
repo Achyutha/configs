@@ -8,11 +8,12 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'https://github.com/leafgarland/typescript-vim.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'w0rp/ale'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'cespare/vim-toml'
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()            " required --- "
 filetype plugin indent on    " required --- "
@@ -21,9 +22,9 @@ set number relativenumber
 syntax on
 
 let &colorcolumn=join(range(80,999),",")
-let g:indentLine_color_term = 239
+let g:indentLine_color_term = 255
 let g:tablineclosebutton=1
-highlight ColorColumn ctermbg=000 guibg=#21060b
+highlight ColorColumn ctermbg=234 guibg=#FFFFFF
 let g:indentLine_setColors = 0
 set incsearch
 set hlsearch
@@ -38,7 +39,9 @@ set shiftwidth=4
 set expandtab
 set undofile
 set undodir=~/.vim/undodir
-set clipboard=unnamedplus
+set clipboard=unnamed
+let g:ycm_use_clangd = 0
+let g:NERDSpaceDelims = 1
 
 " Remap Keys --- "
 noremap <Up> <NOP>
@@ -49,11 +52,12 @@ inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
-inoremap jj <Esc>
+inoremap jk <Esc>
 
 
 if !exists("g:ycm_semantic_triggers")
-  let g:ycm_semantic_triggers = {}
+    let g:ycm_semantic_triggers = {}
 endif
 
-autocmd vimenter * NERDTree | wincmd w
+"Uncomment to open NERDTree by default.
+" autocmd vimenter * NERDTree | wincmd w
