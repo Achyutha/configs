@@ -1,0 +1,10 @@
+[user]
+	name = Aachyutha
+	email = aachyutha2@gmail.com
+
+[alias]
+    st = status
+    ci = commit
+
+[core]
+    editor = vim

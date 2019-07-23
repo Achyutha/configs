@@ -1,0 +1,41 @@
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/achyuthrao/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+CASE_SENSITIVE="false"
+COMPLETION_WAITING_DOTS="true"
+
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+plugins=(
+    git
+    tmux
+    extract
+    sudo
+    web-search
+    python
+    yarn
+    npm
+    pip
+    fzf
+)
+
+function init() {
+    source $HOME/.cargo/env
+    [ -f /usr/local/etc/profile.d/autojump.sh ] && 
+        . /usr/local/etc/profile.d/autojump.sh
+    if [ "$TMUX" = "" ]; then tmux; fi
+
+    source $ZSH/oh-my-zsh.sh
+    source ~/.zsh_env.sh
+    source ~/.zsh_aliases.sh
+    source ~/.zsh_prompt.sh
+
+    PROMPT_EOL_MARK=''
+    fpath+=~/.zfunc
+
+    cd ~
+}
+
+init
+
