@@ -14,6 +14,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'cespare/vim-toml'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'w0rp/ale'
 
 call vundle#end()            " required --- "
 filetype plugin indent on    " required --- "
@@ -42,6 +43,7 @@ set undodir=~/.vim/undodir
 set clipboard=unnamed
 let g:ycm_use_clangd = 0
 let g:NERDSpaceDelims = 1
+set rtp+=/usr/local/opt/fzf
 
 " Remap Keys --- "
 noremap <Up> <NOP>
@@ -59,5 +61,5 @@ if !exists("g:ycm_semantic_triggers")
     let g:ycm_semantic_triggers = {}
 endif
 
-"Uncomment to open NERDTree by default.
+" Uncomment to open NERDTree by default.
 " autocmd vimenter * NERDTree | wincmd w
