@@ -25,5 +25,6 @@ function init() {
     export LESS_TERMCAP_us=$'\e[1;4;31m'
 }
 
+unsetopt histverify
 editor_conf
 init
