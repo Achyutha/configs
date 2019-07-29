@@ -1,14 +1,14 @@
 # This script is used to create the prompt for the zsh shell.
 
 
-# Fetches the Local IP of the machine.
+# Get the Local IP of the machine.
 function getLocalIP() {
     ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'
 }
 
-# Fetches the Public IP of the machine.
+# Get the Public IP of the machine. Waits for the response for atmost 1 sec.
 function getPublicIP() {
-    curl -s ifconfig.me
+    curl -s --connect-timeout 1 ifconfig.me
 }
 
 function prompt() {
