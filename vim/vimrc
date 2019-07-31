@@ -56,6 +56,7 @@ inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 inoremap jk <Esc>
+map <silent> <C-n> :NERDTreeToggle<CR>
 
 
 if !exists("g:ycm_semantic_triggers")
