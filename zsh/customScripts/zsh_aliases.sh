@@ -11,6 +11,7 @@ function init() {
     alias ls='exa'
     alias ll='ls -lrt modified'
     # alias grep='rg'
+    # sudo /usr/local/bin/ntfs-3g /dev/disk2s1 /Volumes/NTFS -olocal -oallow_other
 }
 
 init
