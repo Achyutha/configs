@@ -17,6 +17,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'w0rp/ale'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()            " required --- "
 filetype plugin indent on    " required --- "
