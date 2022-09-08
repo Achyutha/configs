@@ -4,6 +4,14 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "json"
-  ]
+    "json",
+    "rust"
+  ],
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "rust-analyzer.server.path": "/usr/local/Cellar/rust-analyzer/2022-08-29/bin/rust-analyzer",
+  "rust-analyzer.updates.checkOnStartup": false,
+  "rust-analyzer.cachePriming.enable": true,
+  "rust-analyzer.completion.autoimport.enable": true,
+  "rust-analyzer.debug.runtime": "vimspector"
 }
