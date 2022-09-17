@@ -1,10 +1,11 @@
-[user]
-	name = Achyutha
-	email = aachyutha2@gmail.com
-
 [alias]
     st = status
     ci = commit
-
+    diff-words = diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
 [core]
     editor = vim
+[credential]
+	helper = osxkeychain
+[user]
+	name = Achyutha
+	email = aachyutha2@gmail.com
