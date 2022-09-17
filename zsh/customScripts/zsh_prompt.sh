@@ -7,8 +7,8 @@ function getLocalIP() {
 }
 
 # Get the Public IP of the machine. Waits for the response for atmost 1 sec.
-function getPublicIP() {
-    curl -s --connect-timeout 1 ifconfig.me
+function getCurrentTime() {
+    date "+%H:%M:%S"
 }
 
 function prompt() {
@@ -28,10 +28,10 @@ function prompt() {
         grep -vi 'efi' | 
         awk '{print $5}'`"
     
-    # Prints the network information.
-    echo " ${bold}${headingColor}Network Information: ${noColor} ${notBold}"
+    # Prints the Misc information.
+    echo " ${bold}${headingColor}Other Information: ${noColor} ${notBold}"
     echo "\t${headerColor}Local IP:\t ${noColor} `getLocalIP`"
-    echo "\t${headerColor}Public IP:\t ${noColor} `getPublicIP`"
+    echo "\t${headerColor}Local Time:\t ${noColor} `getCurrentTime`"
 }
 
 function setZle() {
