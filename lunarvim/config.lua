@@ -2,6 +2,8 @@ lvim.log.level = "warn"
 vim.g.copilot_assume_mapped = true
 lvim.format_on_save.enabled = true
 lvim.keys.insert_mode["jk"] = "<esc>"
+vim.opt.colorcolumn = "100"
+vim.opt.clipboard = "unnamedplus"
 
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
