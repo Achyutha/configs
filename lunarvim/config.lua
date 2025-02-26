@@ -2,8 +2,12 @@ lvim.log.level = "warn"
 vim.g.copilot_assume_mapped = true
 lvim.format_on_save.enabled = true
 lvim.keys.insert_mode["jk"] = "<esc>"
-vim.opt.colorcolumn = "100"
 vim.opt.clipboard = "unnamedplus"
+local colorcolumn_str = "80"
+for i = 81, 500 do
+  colorcolumn_str = colorcolumn_str .. "," .. tostring(i)
+end
+vim.opt.colorcolumn = colorcolumn_str
 
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
